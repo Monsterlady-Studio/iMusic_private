@@ -395,7 +395,7 @@ class _MyAppState extends State<MyApp> {
                                       children: <Widget>[
                                         RichText(
                                           text: TextSpan(
-                                              text: "《用户协议》",
+                                              text: "《用户协议 & 隐私政策》",
                                               style: TextStyle(
                                                   color: Colors.blue,
                                                   fontFamily: "Poppins-Medium",
