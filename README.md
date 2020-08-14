@@ -1,16 +1,27 @@
-# studentmanager
+<h1 align="center">iMusic/爱乐教室 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-v1.1.0-blue.svg?cacheSeconds=2592000" />
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+</p>
 
-A new Flutter application.
+> 爱乐教室APP
 
-## Getting Started
+## 作者
 
-This project is a starting point for a Flutter application.
+👤 **Monsterlady Studio**
 
-A few resources to get you started if this is your first Flutter project:
+* Github: [@monsterlady](https://github.com/monsterlady)
+* Steam: [@Superude](https://steamcommunity.com/id/381727/)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## 🤝 贡献
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+该软件所有权归属于Monsterlady Studio<br />欢迎邮件联系 [Monsterlady Studio](mailto:monsterladystudio@hotmail.com). 
+
+## 支持
+
+喜欢的话, 就点个 ⭐️ 吧！
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
