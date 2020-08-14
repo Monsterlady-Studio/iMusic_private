@@ -10,14 +10,14 @@
 
 ## 作者
 
-👤 **Monsterlady Studio**
+👤 **Monsterlady**
 
 * Github: [@monsterlady](https://github.com/monsterlady)
 * Steam: [@Superude](https://steamcommunity.com/id/381727/)
 
 ## 🤝 贡献
 
-该软件所有权归属于Monsterlady Studio<br />欢迎邮件联系 [Monsterlady Studio](mailto:monsterladystudio@hotmail.com). 
+该软件所有权归属于Monsterlady<br />欢迎邮件联系 [Monsterlady Studio](mailto:monsterladystudio@hotmail.com). 
 
 ## 支持
 
