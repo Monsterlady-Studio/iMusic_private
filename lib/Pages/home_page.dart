@@ -17,6 +17,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:studentmanager/Uilts/api.dart';
 import 'package:studentmanager/Widgets/brandName.dart';
 import 'package:studentmanager/Widgets/customIcons.dart';
+import 'package:studentmanager/Widgets/notification_widget.dart';
 import 'package:studentmanager/Widgets/policy.dart';
 import 'package:studentmanager/Widgets/wechatContact.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -188,15 +189,19 @@ class _MyAppState extends State<MyApp> {
     jpush.addEventHandler(
       // 接收通知回调方法。
       onReceiveNotification: (Map<String, dynamic> message) async {
-        print("flutter onReceiveNotification: $message");
+        //print(message['title'] + message['alert']);
       },
       // 点击通知回调方法。
       onOpenNotification: (Map<String, dynamic> message) async {
-        print("flutter onOpenNotification: $message");
+        showDialog(
+          context: context,
+          builder: (_) =>
+              NotificationWidget(message['title'], message['alert']),
+        );
       },
       // 接收自定义消息回调方法。
       onReceiveMessage: (Map<String, dynamic> message) async {
-        print("flutter onReceiveMessage: $message");
+        //print("flutter onReceiveMessage: $message");
       },
     );
     jpush.setup(
