@@ -199,7 +199,7 @@ class _MyAppState extends State<MyApp> {
             context: context,
             builder: (_) => Platform.isIOS
                 ? NotificationWidget(message['aps']['alert']['title'],
-                    message['aps']['alert']['alert'])
+                    message['aps']['alert']['body'])
                 : NotificationWidget(message['title'], message['alert']),
           );
         });
