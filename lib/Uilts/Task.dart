@@ -55,7 +55,7 @@ class TaskNotification {
         showDialog(
             context: _context,
             builder: (_) => NotificationWidget(message['aps']['alert']['title'],
-                message['aps']['alert']['alert']));
+                message['aps']['alert']['body']));
       });
     }
   }
