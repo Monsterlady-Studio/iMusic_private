@@ -9,7 +9,7 @@ class TaskNotification {
   int read = 0;
   BuildContext _context;
   JPush jpush;
-  factory TaskNotification() =>_taskNotification()
+  factory TaskNotification() => _taskNotification();
   static TaskNotification get instance => _taskNotification();
   static TaskNotification _instance;
 
@@ -40,12 +40,12 @@ class TaskNotification {
   void runTask(BuildContext context) async {
     if (_context == null) {
       _context = context;
-    } else {
-      if (Platform.isIOS) {
-        final map = await jpush.getLaunchAppNotification();
-        if (map != null && map.isNotEmpty) {
-          jump(map);
-        }
+    }
+
+    if (Platform.isIOS) {
+      final map = await jpush.getLaunchAppNotification();
+      if (map != null && map.isNotEmpty) {
+        jump(map);
       }
     }
   }
