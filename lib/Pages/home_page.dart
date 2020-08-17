@@ -227,6 +227,7 @@ class _MyAppState extends State<MyApp> {
   void dispose() {
     _connectivitySubscription.cancel();
     super.dispose();
+    TaskNotification.instance.clearContext();
   }
 
   //平台消息是异步的，所以我们用异步方法初始化。

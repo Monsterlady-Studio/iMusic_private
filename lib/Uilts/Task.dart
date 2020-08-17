@@ -40,12 +40,11 @@ class TaskNotification {
   void runTask(BuildContext context) async {
     if (_context == null) {
       _context = context;
-    }
-
-    if (Platform.isIOS) {
-      final map = await jpush.getLaunchAppNotification();
-      if (map != null && map.isNotEmpty) {
-        jump(map);
+      if (Platform.isIOS) {
+        final map = await jpush.getLaunchAppNotification();
+        if (map != null && map.isNotEmpty) {
+          jump(map);
+        }
       }
     }
   }
@@ -58,6 +57,12 @@ class TaskNotification {
             builder: (_) => NotificationWidget(message['aps']['alert']['title'],
                 message['aps']['alert']['alert']));
       });
+    }
+  }
+
+  void clearContext() {
+    if (_context != null) {
+      _context = null;
     }
   }
 }
