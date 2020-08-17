@@ -475,10 +475,7 @@ class _PushScreenState extends State<PushScreen>
                                                       "ios"
                                                     ],
                                                     "audience": {
-                                                      "tag": [
-                                                        "student",
-                                                        "teacher"
-                                                      ]
+                                                      "tag": ["student", "test"]
                                                     },
                                                     "notification": {
                                                       "android": {

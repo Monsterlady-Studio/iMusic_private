@@ -6,7 +6,6 @@ import 'package:jpush_flutter/jpush_flutter.dart';
 import 'package:studentmanager/Widgets/notification_widget.dart';
 
 class TaskNotification {
-  int read = 0;
   BuildContext _context;
   JPush jpush;
   factory TaskNotification() => _taskNotification();
@@ -55,7 +54,7 @@ class TaskNotification {
         showDialog(
             context: _context,
             builder: (_) => NotificationWidget(message['aps']['alert']['title'],
-                message['aps']['alert']['alert']));
+                message['aps']['alert']['body']));
       });
     }
   }

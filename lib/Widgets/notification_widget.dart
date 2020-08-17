@@ -31,10 +31,17 @@ class _notificationWidget extends State<NotificationWidget> {
   @override
   Widget build(BuildContext context) {
     return new AlertDialog(
-      title: Text(
-        title,
-        textAlign: TextAlign.center,
-        style: large,
+      title: Container(
+        decoration: BoxDecoration(
+          color: Color(0xFFff6e6e),
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        child: Center(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 22.0, vertical: 6.0),
+            child: Text(title, style: medium),
+          ),
+        ),
       ),
       content: new Scaffold(
         backgroundColor: Colors.white,
@@ -47,7 +54,7 @@ class _notificationWidget extends State<NotificationWidget> {
                 child: SingleChildScrollView(
                   child: _buildAboutText(),
                 ),
-                flex: 7,
+                flex: 4,
               ),
               new Expanded(
                 child: new RichText(
@@ -106,11 +113,11 @@ class _notificationWidget extends State<NotificationWidget> {
                             fontFamily: "Poppins-Bold",
                           ))
                     ])),
-                flex: 2,
+                flex: 1,
               ),
               new Expanded(
                 child: brandName(),
-                flex: 2,
+                flex: 1,
               ),
             ],
           ),
