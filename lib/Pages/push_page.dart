@@ -493,7 +493,7 @@ class _PushScreenState extends State<PushScreen>
                                                       }
                                                     },
                                                     "options": {
-                                                      "apns_production": true
+                                                      "apns_production": false
                                                     }
                                                   };
                                                   RestApi()

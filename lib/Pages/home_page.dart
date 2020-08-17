@@ -193,11 +193,13 @@ class _MyAppState extends State<MyApp> {
       },
       // 点击通知回调方法。
       onOpenNotification: (Map<String, dynamic> message) async {
-        showDialog(
-          context: context,
-          builder: (_) =>
-              NotificationWidget(message['title'], message['alert']),
-        );
+        Future.delayed(Duration(seconds: 1), () {
+          showDialog(
+            context: context,
+            builder: (_) =>
+                NotificationWidget(message['title'], message['alert']),
+          );
+        });
       },
       // 接收自定义消息回调方法。
       onReceiveMessage: (Map<String, dynamic> message) async {
