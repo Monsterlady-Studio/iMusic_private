@@ -14,6 +14,7 @@ import 'package:jpush_flutter/jpush_flutter.dart';
 import 'package:leancloud_storage/leancloud.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:studentmanager/Uilts/Task.dart';
 import 'package:studentmanager/Uilts/api.dart';
 import 'package:studentmanager/Widgets/brandName.dart';
 import 'package:studentmanager/Widgets/customIcons.dart';
@@ -196,8 +197,10 @@ class _MyAppState extends State<MyApp> {
         Future.delayed(Duration(seconds: 1), () {
           showDialog(
             context: context,
-            builder: (_) =>
-                NotificationWidget(message['title'], message['alert']),
+            builder: (_) => Platform.isIOS
+                ? NotificationWidget(message['aps']['alert']['title'],
+                    message['aps']['alert']['alert'])
+                : NotificationWidget(message['title'], message['alert']),
           );
         });
       },
@@ -615,6 +618,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context, width: 750, height: 1334, allowFontScaling: false);
+    TaskNotification.instance.runTask(context);
     return new WillPopScope(
         child: new Scaffold(
             backgroundColor: Colors.white,
